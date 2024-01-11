@@ -1,0 +1,30 @@
+
+
+   <h1 >User Registretion Form </h1>
+  <% if(errorMassage){ %>
+    <div class="alert alert-danger" role="alert">
+      <%= errorMassage %>
+    </div>
+<%}%>
+
+
+<form class="row g-3  d-flex text-align-center" method="post" action="/register" >
+
+    <div class="col-12">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" name="name" class="form-control" id="name" placeholder="Jhon Doe">
+      </div>
+      <div class="col-12">
+        <label for="Email" class="form-label">Email</label>
+        <input type="email" class="form-control" name="email" id="Email">
+      </div>
+    <div class="col-12">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" name="password" class="form-control" id="password">
+    </div>
+   
+    
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Sign up</button>
+    </div>
+  </form>

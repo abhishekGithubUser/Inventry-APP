@@ -1,0 +1,40 @@
+<!-- view add/new product.ejs -->
+
+<h1 class="my-4 header">New Product </h1>
+
+<% if(errorMassage){ %>
+  <div class="alert alert-danger" role="alert">
+
+   <%= errorMassage %>
+  </div>
+<% } %>
+
+
+  
+<form action="/" method="post" enctype="multipart/form-data" >
+    
+    <div class="mb-3" >
+        <label for="name"  class="form-label">Name</label>
+        <input type="text" name="name" class="form-control" id="name" placeholder="Jhon Doe ">
+      </div>
+      
+      <div class="mb-3">
+          <label for="desc" class="form-label">Discription</label>
+          <textarea class="form-control" name="desc" id="desc" rows="3"></textarea>
+        </div>
+      
+      <div class="mb-3">
+          <label for="price" class="form-label">Price</label>
+          <input type="number" name="price" class="form-control" id="price" placeholder="123">
+        </div>
+        
+        <div class="mb-3">
+          <label for="imgUrl" class="form-label">Image Ural</label>
+          <!-- <input type="text" name="imgUrl" class="form-control" id="exampleFormControlInput1" placeholder="Past The img URL "> -->
+          <input type="file" class="form-control" accept="images/*" name="imgUrl" id="imgUrl" >
+        </div>
+      
+        <button type="submit" class="btn-primary btn"> Add Producr </button>
+</form>
+   
+

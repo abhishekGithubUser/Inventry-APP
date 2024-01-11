@@ -1,0 +1,6 @@
+
+# Install the malter. - Done 
+2.Change the view - Done
+3.Middelware to handle file -Done
+4.Apply the Middelware - Done
+5.Upadte the controller to Upadte to urls image 

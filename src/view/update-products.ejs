@@ -1,0 +1,42 @@
+
+<!-- view add/new product.ejs -->
+
+<h1 class="mb-4 header">Update Product </h1>
+<% if(errorMassage){ %>
+   <div class="alert alert-danger" role="alert">
+ 
+    <%= errorMassage %>
+   </div>
+<% } %>
+<form action="/update" method="post" enctype="multipart/form-data" >
+  
+    <input type="hidden" name="id" class="form-control" value="<%= product.id %>" id="id" >
+      
+      <div class="mb-3" >
+          <label for="name"  class="form-label"></label>
+          <input type="text" name="name" class="form-control" id="name" value="<%= product.name %>" >
+        </div>
+        
+        <div class="mb-3">
+            <label for="desc" class="form-label">Discription</label>
+            <textarea class="form-control" name="desc" id="desc" rows="3"><%= product.desc %></textarea>
+          </div>
+        
+        <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="number" name="price" class="form-control" id="price" value="<%= product.price %>" >
+          </div>
+          
+          <div class="mb-3">
+            <label for="imgUrl" class="form-label">Image Url</label>
+
+          <input type="file" class="form-control" accept="images/*" name="imgUrl" id="imgUrl" >
+
+            <!-- <input type="text" name="imgUrl" class="form-control" id="exampleFormControlInput1" value="<%= product.imgUrl %>" > -->
+          </div>
+        
+          <button type="submit" class="btn-primary btn">Update Producr</button>
+  </form>
+     
+  
+  
